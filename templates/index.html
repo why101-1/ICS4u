@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.5.9/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/7smIyrcNI2hqUz8p/scene.splinecode"></spline-viewer>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    .wrapper {
+        position: absolute;
+        z-index: 10;
+    height: 100vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+   </style>
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="typing-demo">
+          This is a typing demo.
+        </div>
+    </div>
+ <script>import { Application } from '@splinetool/runtime';
+
+    const canvas = document.getElementById('canvas3d');
+    const app = new Application(canvas);
+    app.load('https://prod.spline.design/7smIyrcNI2hqUz8p/scene.splinecode');
+    
+    </script>
+</body>
+</html>
